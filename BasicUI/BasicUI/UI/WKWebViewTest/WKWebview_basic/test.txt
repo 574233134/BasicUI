@@ -1,0 +1,3 @@
+WKWebView是现代WebKit API在iOS8和OS X Yosemite应用中的核心部分。它代替了UIKit的UIWebView和APPKit中的WebView,提供了统一的跨双平台API。
+
+UIWebView&UIWebDelegate这两个东西在WKWebKit中被重构成16个类、3个协议

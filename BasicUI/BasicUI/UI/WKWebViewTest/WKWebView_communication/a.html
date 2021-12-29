@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+            <script language="javascript">
+
+            var ctuapp_share_img="www.baidu.com";
+            function locationClick() {
+                window.webkit.messageHandlers.Location.postMessage('js-位置');
+            }
+
+            function setLocation(location) {
+                alert(location);
+                document.getElementById("returnValue").value = location;
+            }
+
+            function popconfirm()
+            {
+               // 确认框
+              if(confirm("确认框：真的要删除吗?"))
+              {
+                 alert("点击了确认按钮");
+              }
+              else
+              {
+                  alert("点击了取消按钮");
+              }
+            }
+
+            function inputBox()
+            {
+              // 输入框
+              age = prompt("请输入你的年龄:","20");
+              if (age != null)
+              {
+                  document.getElementById("returnValue").value = "你今年" + age +"岁了!";
+              }
+              else
+              {
+                   document.getElementById("returnValue").value = "你按了[取消]按钮";
+              }
+            }
+
+                </script>
+            </head>
+
+    <body>
+        <h1>这是按钮调用</h1>
+        <input type="button" value="获取定位" onclick="locationClick()" />
+        <h1>这是回调结果展示区</h1>
+        <textarea id ="returnValue" type="value" rows="5" cols="40">
+        </textarea>
+    </body>
+</html>
